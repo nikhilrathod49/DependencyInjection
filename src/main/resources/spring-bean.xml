@@ -1,0 +1,22 @@
+<!-- bean-factory-demo.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="studentDetailsBean" class="com.spring.student.StudentDetails" >
+        <constructor-arg value="Nikhil Rathod" index="0" />
+        <constructor-arg value="20"  index="1"/>
+    </bean>
+
+	<bean id="studentServiceBean" class="com.spring.student.StudentService">
+		<constructor-arg ref="studentDetailsBean" />
+	</bean>
+	
+	<bean id="student"  class="com.spring.student.Student">
+		<constructor-arg value="A" />
+	</bean>
+	
+	
+	
+</beans>
